@@ -46,8 +46,10 @@
     return obj;
   }
 
-  function combine(obj, src) {
-    if (!obj) return false;
+  function combine(obj, src, callback) {
+    if (!obj) return 'obj cannot be falsely';
+    if (obj !== Object(obj) || Array.isArray(obj)) return 'obj must be an object';
+    if (!Object.keys(obj).length) return 'obj cannot be empty';
     for (let key in src) {
       if (src.hasOwnProperty(key)) {
         obj[key] = obj[key].concat(src[key][0]);

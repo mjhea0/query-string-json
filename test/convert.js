@@ -32,7 +32,7 @@
     }
   ];
 
-  describe('main()', () => {
+  describe('convert()', () => {
     beforeEach((done) => {
       fs.stat(file, (err, stats) => {
         if (!err) fs.unlinkSync(file);
