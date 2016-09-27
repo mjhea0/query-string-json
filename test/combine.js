@@ -6,31 +6,17 @@
   const should = chai.should();
 
   const helpers = require('../index');
+  const fixtures = require('./_fixtures');
 
   describe('combine()', () => {
     it('should combine objects', (done) => {
-      const arr = [
-        {
-          some: [ 'params' ],
-          over: [ 'here' ]
-        },
-        {
-          some: [ 'params' ],
-          over: [ 'here' ],
-          my: 'time'
-        }
-      ];
-      helpers.combine(arr[0], {}).should.eql(
-        { some: [ 'params' ], over: [ 'here' ] });
-      const src = helpers.combine(arr[0], {});
-      const actual = helpers.combine(arr[1], src);
-      actual.should.eql(
-        {
-          some: [ 'params', 'params' ],
-          over: [ 'here', 'here' ],
-          my: 'time'
-        }
-      );
+      helpers.combine(fixtures.combine[0].argument, {}).should.eql(
+        fixtures.combine[0].result);
+      helpers.combine(fixtures.combine[1].argument, {}).should.eql(
+        fixtures.combine[1].result);
+      const src = helpers.combine(fixtures.combine[0].argument, {});
+      const actual = helpers.combine(fixtures.combine[1].argument, src);
+      actual.should.eql(fixtures.combineTotal);
       done();
     });
     it('should return an error if the object is falsely', (done) => {
