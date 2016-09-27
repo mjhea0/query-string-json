@@ -4,3 +4,11 @@
 [![Coverage Status](https://coveralls.io/repos/github/mjhea0/query-string-json/badge.svg?branch=master)](https://coveralls.io/github/mjhea0/query-string-json?branch=master)
 
 Parse and convert URL query strings to JSON
+
+## Install
+
+```sh
+npm install query-string-json
+```
+
+## Usage
