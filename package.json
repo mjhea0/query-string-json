@@ -1,0 +1,14 @@
+{
+  "name": "query-string-json",
+  "version": "0.0.0",
+  "description": "Parse and convert URL query strings to JSON",
+  "author": "Michael Herman",
+  "license": "MIT",
+  "scripts": {
+    "test": "mocha ./test/*.js -b"
+  },
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^3.0.2"
+  }
+}
