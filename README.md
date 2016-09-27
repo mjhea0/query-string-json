@@ -12,3 +12,16 @@ npm install query-string-json
 ```
 
 ## Usage
+
+```javascript
+const parser = require('query-string-json');
+const arr = [
+  'https://foo.bar?some=params&over=here',
+  'https://foo.bar?some=test'
+];
+const file = 'sample.json';
+
+parser.convert(arr, file, (err, res) => {
+  if (!err) console.log('success!');
+});
+```
