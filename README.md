@@ -2,6 +2,7 @@
 
 [![Build Status](https://travis-ci.org/mjhea0/query-string-json.svg?branch=master)](https://travis-ci.org/mjhea0/query-string-json)
 [![Coverage Status](https://coveralls.io/repos/github/mjhea0/query-string-json/badge.svg?branch=master)](https://coveralls.io/github/mjhea0/query-string-json?branch=master)
+[![npm version](https://badge.fury.io/js/query-string-json.svg)](https://badge.fury.io/js/query-string-json)
 
 Parse and convert URL query strings to JSON
 
