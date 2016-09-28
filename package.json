@@ -1,6 +1,6 @@
 {
   "name": "query-string-json",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Parse and convert URL query strings to JSON",
   "author": "Michael Herman",
   "license": "MIT",
@@ -10,9 +10,9 @@
     "coveralls": "istanbul cover ./node_modules/mocha/bin/_mocha ./test/*.js --report lcovonly -- -R spec && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js && rm -rf ./coverage"
   },
   "devDependencies": {
-    "chai": "^3.5.0",
-    "coveralls": "^2.11.14",
-    "istanbul": "^0.4.5",
-    "mocha": "^3.0.2"
+    "chai": "~3.5.0",
+    "coveralls": "~2.11.14",
+    "istanbul": "~0.4.5",
+    "mocha": "~3.0.2"
   }
 }
