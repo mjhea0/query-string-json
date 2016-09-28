@@ -10,10 +10,15 @@
       return false;
     }
     const data = {};
-    const final = arr.map((url) => {
+    const final = [];
+    for (let url of arr) {
+      if (typeof url !== 'string') {
+        callback(new Error('Array must contain strings'));
+        return false;
+      }
       const obj = parse(url);
-      return combine(obj, data);
-    });
+      final.push(combine(obj, data));
+    }
     write(file, JSON.stringify(final), (error) => {
       if (error) callback(error);
       callback(null, true);

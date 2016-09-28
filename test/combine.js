@@ -23,7 +23,6 @@
       helpers.combine(null, {}).should.eql('obj cannot be falsely');
       helpers.combine(undefined, {}).should.eql('obj cannot be falsely');
       helpers.combine(false, {}).should.eql('obj cannot be falsely');
-      helpers.combine({}, {}).should.eql('obj cannot be empty');
       done();
     });
     it('should return an error if the object is empty', (done) => {
