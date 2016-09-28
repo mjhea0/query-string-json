@@ -29,6 +29,21 @@
         });
       });
     });
+    it('should return an error if the object is falsely', (done) => {
+      helpers.convert(null, '_sample.json', (err, res) => {
+        should.exist(err);
+      });
+      helpers.convert(undefined, '_sample.json', (err, res) => {
+        should.exist(err);
+      });
+      helpers.convert(false, '_sample.json', (err, res) => {
+        should.exist(err);
+      });
+      helpers.convert({}, '_sample.json', (err, res) => {
+        should.exist(err);
+      });
+      done();
+    });
   });
 
 }());

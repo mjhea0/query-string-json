@@ -5,6 +5,10 @@
   const fs = require('fs');
 
   function convert(arr, file, callback) {
+    if (!Array.isArray(arr)) {
+      callback(new Error('First argument must be an array'));
+      return false;
+    }
     const data = {};
     const final = arr.map((url) => {
       const obj = parse(url);
