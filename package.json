@@ -1,6 +1,6 @@
 {
   "name": "query-string-json",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Parse and convert URL query strings to JSON",
   "author": "Michael Herman",
   "license": "MIT",
@@ -14,5 +14,35 @@
     "coveralls": "~2.11.14",
     "istanbul": "~0.4.5",
     "mocha": "~3.0.2"
-  }
+  },
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "dependencies": {
+    "chai": "~3.5.0",
+    "coveralls": "~2.11.14",
+    "faker": "~3.1.0",
+    "istanbul": "~0.4.5"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mjhea0/query-string-json.git"
+  },
+  "keywords": [
+    "parse",
+    "querystring",
+    "query",
+    "qs",
+    "param",
+    "parameter",
+    "url",
+    "uri",
+    "stringify",
+    "json"
+  ],
+  "bugs": {
+    "url": "https://github.com/mjhea0/query-string-json/issues"
+  },
+  "homepage": "https://github.com/mjhea0/query-string-json#readme"
 }
