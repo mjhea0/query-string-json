@@ -54,6 +54,11 @@
       actual.should.eql({ some: [ 'params', 'here' ] });
       done();
     });
+    it('should handle spaces', (done) => {
+      const actual = helpers.parse('https://foo.bar?some=params&some= here');
+      actual.should.eql({ some: [ 'params', ' here' ] });
+      done();
+    });
   });
 
 }());

@@ -1,6 +1,6 @@
 {
   "name": "query-string-json",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "description": "Parse and convert URL query strings to JSON",
   "author": "Michael Herman",
   "license": "MIT",

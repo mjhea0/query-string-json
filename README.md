@@ -9,7 +9,7 @@ Parse and convert URL query strings to JSON
 ## Install
 
 ```sh
-npm install query-string-json
+$ npm install query-string-json
 ```
 
 ## Usage
