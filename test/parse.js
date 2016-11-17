@@ -15,8 +15,19 @@
       actual.over.should.eql([ 'here' ]);
       done();
     });
+    it('should extract query string from multiple urls', (done) => {
+      const url = 'https://foo.bar?some=params&over=here';
+      for (let i = 0; i < 100; i++) {
+        const actual = helpers.parse('https://foo.bar?some=params&over=here');
+        actual.should.contain.keys('some', 'over');
+        actual.some.should.eql([ 'params' ]);
+        actual.over.should.eql([ 'here' ]);
+      }
+      done();
+    });
     it('should handle strings not containing a query string', (done) => {
       helpers.parse('https://foo.bar?some').should.eql({some: null});
+      helpers.parse('https://foo.bar').should.eql(false);
       const actual = helpers.parse('https://foo.bar?some&over');
       actual.should.contain.keys('some', 'over');
       should.not.exist(actual.some);
